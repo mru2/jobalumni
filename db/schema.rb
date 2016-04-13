@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20160413094045) do
 
   create_table "positions", force: :cascade do |t|
     t.integer  "company_id"
-    t.integer  "user_id"
+    t.integer  "user_id"  
     t.string   "title"
     t.date     "end_date"
     t.datetime "created_at", null: false

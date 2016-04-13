@@ -25,6 +25,12 @@ gem 'slim'
 
 gem 'redcarpet'
 
+# Authentication
+gem 'omniauth-linkedin-oauth2'
+gem 'omniauth-oauth2', '1.3.1'
+
+gem 'bootstrap-sass'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,7 +52,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'dotenv-rails'
 
-  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :development do

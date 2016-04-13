@@ -24,4 +24,5 @@ class User < ActiveRecord::Base
     "#{first_name.capitalize} #{last_name.upcase}"
   end
 
+
 end

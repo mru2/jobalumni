@@ -1,1 +1,11 @@
-h1 Hello World
+.col-md-12
+  .col-md-4
+
+  .col-md-8
+    h1 Welcome!
+
+    - if current_user
+      = image_tag current_user.avatar_url, alt: current_user.full_name
+      = link_to 'Log Out', logout_path, method: :delete, class: 'btn btn-lg btn-default'
+    - else
+      = link_to 'Sign in with LinkedIn', '/auth/linkedin', class: 'btn btn-lg btn-primary'
