@@ -8,6 +8,7 @@
 
 hec = School.create!(name: 'HEC', jt_id: 3178)
 swarovski = Company.create!(name: 'Swarovski', jt_id: 5286)
+Company.create!(name: 'Jobteaser.com', jt_id: 12)
 
 junior = User.create!(
   first_name: 'Louis',
