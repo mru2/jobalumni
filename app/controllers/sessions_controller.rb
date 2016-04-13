@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
     begin
       service = CreateUserFromOmniauth.new(request.env['omniauth.auth'])
       @user = service.execute!
-      binding.pry
       session[:user_id] = @user.id
       flash[:success] = "Welcome, #{@user.full_name}!"
     rescue
