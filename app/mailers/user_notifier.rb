@@ -4,7 +4,7 @@ class UserNotifier < ApplicationMailer
     @user = user
     @message = message
     @reply_to = reply_to
-    markdown_mail(to: @user.email, subject: subject, reply_to: @reply_to)
+    markdown_mail(to: @user.email, subject: subject, from: @reply_to, reply_to: @reply_to)
   end
 
 end
