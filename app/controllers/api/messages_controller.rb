@@ -2,7 +2,7 @@ module Api
   class MessagesController < BaseController
 
     def create
-      user = User.find_by(params[:id])
+      user = User.find_by_id(params[:id])
       subject = params[:subject]
       message = params[:message]
       reply_to = params[:reply_to]
