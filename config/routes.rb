@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     get '/users/:school_id/:company_id' => 'users#index'
+    resources :messages, only: [:create]
   end
 
   # Example of regular route:

@@ -9,7 +9,9 @@ module Api
 
       render_404! unless user && subject && message && reply_to
 
-      UserNotifier.send_message(user, subject, message, reply_to)
+      UserNotifier.send_message(user, subject, message, reply_to).deliver_now
+
+      head 200
     end
 
   end
